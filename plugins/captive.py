@@ -20,7 +20,7 @@
 # config/responder/AccessDenied.html for now
 
 from plugins.plugin import Plugin
-from urlparse import urlparse
+from urllib.parse import urlparse
 
 
 class Captive(Plugin):

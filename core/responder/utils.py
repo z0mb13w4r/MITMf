@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # This file is part of Responder
 # Original work by Laurent Gaffie - Trustwave Holdings
 #
@@ -20,8 +20,9 @@ import re
 import logging
 import socket
 import time
-import settings
 import sqlite3
+
+from core.responder import settings
 
 def RespondToThisIP(ClientIp):
 

@@ -86,9 +86,9 @@ class Inject(Plugin):
 
         if self._should_inject(ip, hn) and self._ip_filter(ip) and self._host_filter(hn) and (hn not in self.ip) and ("text/html" in mime):
 
-    	    if encoding is not None:
+            if encoding is not None:
                 html = BeautifulSoup(data.decode(encoding, "ignore"), "lxml")
-    	    else:
+            else:
                 html = BeautifulSoup(data, "lxml")
 
             if html.body:

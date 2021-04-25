@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python3
 
 # Copyright (c) 2014-2016 Marcello Salvati
 #
@@ -177,7 +177,7 @@ class FilePwn(Plugin):
 
         members = tar_file.getmembers()
         for info in members:
-            print "\t{0} {1}".format(info.name, info.size)
+            print("\t{0} {1}".format(info.name, info.size))
 
         new_tar_storage = tempfile.NamedTemporaryFile()
         new_tar_file = tarfile.open(mode='w' + compression_mode, fileobj=new_tar_storage)
@@ -268,7 +268,7 @@ class FilePwn(Plugin):
         self.log.info("ZipFile contents and info:")
 
         for info in zippyfile.infolist():
-            print "\t{0} {1}".format(info.filename, info.file_size)
+            print("\t{0} {1}".format(info.filename, info.file_size))
 
         tmpDir = tempfile.mkdtemp()
         zippyfile.extractall(tmpDir)
